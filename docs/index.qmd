@@ -1,0 +1,160 @@
+---
+title: "Abschlussprojekt"
+author: "Leon Kreis"
+date: "`r Sys.Date()`"
+format: html
+toc: true
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(readxl)
+library(devtools)
+library(statR)
+
+```
+
+```{r}
+bib_bestand<-read_excel("/cloud/project/daten/raw/R_Projekt.xlsx")
+glimpse(bib_bestand)
+
+```
+
+# Einleitung
+
+In diesem R-Projekt versuche ich unseren Bibliotheks-Bestand nach dem Jahr der Veröffentlichung der einzelnen Medien aufzustellen. Konkret also lautet die Frage: "Wie viele Bücher haben wir, welche z.Bsp. 1950 publiziert wurden?"
+
+## Daten
+
+Bei den verwendeten Daten handelt es sich um eine Bestandesliste aller Datensätze in der Bibliothek des Staatsarchiv ZH. Diese wurde von SLSP (Swiss Librarian Service Platform) produziert und zur Verfügung gestellt. Mit ALMA, dem von uns verwendeten Bibliotheksprogramm, sind die Datensätze auf 100'000 Zeilen limitiert, daher war es einfacher, direkt beim Anbieter anzufragen, anstatt selbst etwas zusammen zu basteln.
+
+## Analyseziele
+
+Ich möchte jeden der fünf Bestände in jeweils 6 Zeitstrahlen unterteilen und dies dann auch graphisch darstellen (24 Graphiken). Auch noch ein grosses Streudiagramm, wo man sieht, wie die Verteilung unter den einzelnen Beständen (A-E) aussieht.
+
+# Daten Aufbereitung
+
+```{r}
+#Testbereich, keine endgültige Aufbearbeitung
+glimpse(bib_bestand)
+
+#Die Funktion gibt die Anzahl der Einträge in Publication Date zurück, bei denen ein Wert vorhanden ist: 8462
+bib_gefiltert<-bib_bestand$`Publication Date`
+sum(!is.na(bib_bestand$`Publication Date`))
+
+```
+
+```{r}
+
+
+
+#2 Aus der Spalte "Publication Date" das Minuszeichen entfernen, da sonst eine Sortierung nach Jahreszahlen (auch filter) nicht möglich ist.
+
+bib_bestand_besenrein <- bib_bestand
+bib_bestand_besenrein$`Publication Date` <- gsub("-", "", bib_bestand_besenrein$`Publication Date`)
+glimpse(bib_bestand_besenrein)
+
+
+#3 Einzig die Spalte `Publication Date` aus dem Datensatz extrahiert.    
+bib_nur_publikation <- subset(bib_bestand_besenrein, select = `Publication Date`)
+
+#4 In nummerischen Vektor umgewandelt für den Filter nach Jahreszahlen
+bib_bestand_besenrein$`Publication Date` <- as.numeric(bib_bestand_besenrein$`Publication Date`)
+
+#5 In 50er-Jahr-Schritten jeweils die einzelnen Veröffentlichungsdaten aus "bib_bestand_besenrein" gefiltert, um daraus am Ende 6 Grafiken erstellen zu können. 
+
+bib_gefiltert_vor_1800 <- filter(bib_bestand_besenrein,(`Publication Date` <=1800))
+
+bib_gefiltert_1800_1850 <- filter(bib_bestand, between(`Publication Date`, 1800, 1850))
+
+bib_gefiltert_1851_1899 <- filter(bib_bestand_besenrein, between(`Publication Date`, 1850, 1900)) 
+
+bib_gefiltert_1900_1950 <- filter(bib_bestand_besenrein, between(`Publication Date`, 1900, 1950)) 
+
+bib_gefiltert_1951_1999 <- filter(bib_bestand_besenrein, between(`Publication Date`, 1951, 1999)) 
+
+bib_gefiltert_2000_2050 <- filter(bib_bestand_besenrein, between(`Publication Date`, 2000, 2050)) 
+
+
+#Versuch, nun auch noch nach der jeweiligen Standort-Signatur (A-E) zu sortieren
+
+#A Geschichte des Auslands
+bib_gefiltert_1600_2025_A <- filter(
+  bib_bestand_besenrein,
+  between(`Publication Date`, 1600, 2025),
+  grepl("^A", `Permanent Call Number`) | grepl("A.*III|III.*A", `Permanent Call Number`))
+#Visualisierung
+ggplot(bib_gefiltert_1600_2025_A, mapping=aes(x=`Publication Date`))+
+  geom_bar()+labs(title="Bibliotheksbestand A nach Veröffentlichungszeit der einzelnen Medien",
+         subtitle="in der StAZH Bibliothek")+theme_stat()
+
+#B Schweizer Geschichte
+bib_gefiltert_1600_2025_B <- filter(
+  bib_bestand_besenrein,
+  between(`Publication Date`, 1600, 2025),
+  grepl("^B", `Permanent Call Number`) | grepl("B.*III|III.*B", `Permanent Call Number`))
+#Visualisierung
+ggplot(bib_gefiltert_1600_2025_B, mapping=aes(x=`Publication Date`))+
+  geom_bar()+labs(title="Bibliotheksbestand B nach Veröffentlichungszeit der einzelnen Medien",
+         subtitle="in der StAZH Bibliothek")+theme_stat()
+
+#C Geschichte der Kantone
+bib_gefiltert_1600_2025_C <- filter(
+  bib_bestand_besenrein,
+  between(`Publication Date`, 1600, 2025),
+  grepl("^C", `Permanent Call Number`) | grepl("C.*III|III.*C", `Permanent Call Number`))
+#Visualisierung
+ggplot(bib_gefiltert_1600_2025_C, mapping=aes(x=`Publication Date`))+
+  geom_bar()+labs(title="Bibliotheksbestand C nach Veröffentlichungszeit der einzelnen Medien",
+         subtitle="in der StAZH Bibliothek")+theme_stat()
+
+#D Zürcher Geschichte
+bib_gefiltert_1600_2025_D <- filter(
+  bib_bestand_besenrein,
+  between(`Publication Date`, 1600, 2025),
+  grepl("^D", `Permanent Call Number`) | grepl("D.*III|III.*D", `Permanent Call Number`))
+#Visualisierung
+ggplot(bib_gefiltert_1600_2025_D, mapping=aes(x=`Publication Date`))+
+  geom_bar()+labs(title="Bibliotheksbestand D nach Veröffentlichungszeit der einzelnen Medien",
+         subtitle="in der StAZH Bibliothek")+theme_stat()
+
+#E Hilfswissenschaften
+bib_gefiltert_1600_2025_E <- filter(
+  bib_bestand_besenrein,
+  between(`Publication Date`, 1600, 2025),
+  grepl("^E", `Permanent Call Number`) | grepl("E.*III|III.*E", `Permanent Call Number`))
+#Visualisierung
+ggplot(bib_gefiltert_1600_2025_E, mapping=aes(x=`Publication Date`))+
+  geom_bar()+labs(title="Bestand E nach Erscheinungsdatum d. Bücher",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")
+
+```
+
+# Daten Visualisierung
+
+```{r}
+#Probe-Visualisierung 
+ggplot(bib_gefiltert_1800_1850, mapping=aes(x=`Publication Date`))+
+  geom_bar()+labs(title="Publikationen 1800-1850",
+         subtitle="in der StAZH Bibliothek")
+
+```
+
+```{r}
+ggplot(bib_gefiltert_1600_2025_E, mapping=aes(x=`Publication Date`))+
+  geom_bar()+labs(title="Bestand E nach Erscheinungsdatum d. Bücher",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")
+```
+
+```{r}
+#Grafik über den gesamten Zeitraum mit allen Medien, welche eine Veröffentlichungsangabe haben
+ggplot(bib_bestand_besenrein, mapping=aes(x=`Publication Date`))+
+  geom_bar()+labs(title="Publikationen 1800-2025",
+         subtitle="in der StAZH Bibliothek")
+
+```
+
+# Schlussfolgerungen
