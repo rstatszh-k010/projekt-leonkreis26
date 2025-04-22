@@ -1,70 +1,12 @@
----
-title: "Abschlussprojekt"
-author: "Leon Kreis"
-date: "`r Sys.Date()`"
-format: html
-toc: true
----
 
-```{r}
-#| message: false
-
-library(tidyverse)
-library(ggplot2)
-library(dplyr)
-library(readr)
-library(readxl)
-library(devtools)
-library(statR)
-
-```
-
-```{r}
+# Daten Einlesen
 bib_bestand <- read_excel(here::here("daten/raw/R_Projekt.xlsx")) |> 
   janitor::clean_names() 
 
-read_csv(here::here("daten/raw/daten.csv"))
-
-glimpse(bib_bestand)
-
-```
-
-
-
-```{r}
-# Daten Transformation
-
-
-```
-
-
-# Einleitung
-
-In diesem R-Projekt versuche ich unseren Bibliotheks-Bestand nach dem Jahr der Veröffentlichung der einzelnen Medien aufzustellen. Konkret also lautet die Frage: "Wie viele Bücher haben wir, welche z.Bsp. 1950 publiziert wurden?"
-
-## Daten
-
-Bei den verwendeten Daten handelt es sich um eine Bestandesliste aller Datensätze in der Bibliothek des Staatsarchiv ZH. Diese wurde von SLSP (Swiss Librarian Service Platform) produziert und zur Verfügung gestellt. Mit ALMA, dem von uns verwendeten Bibliotheksprogramm, sind die Datensätze auf 100'000 Zeilen limitiert, daher war es einfacher, direkt beim Anbieter anzufragen, anstatt selbst etwas zusammen zu basteln.
-
-## Analyseziele
-
-Ich möchte jeden der fünf Bestände in jeweils 6 Zeitstrahlen unterteilen und dies dann auch graphisch darstellen (24 Graphiken). Auch noch ein grosses Streudiagramm, wo man sieht, wie die Verteilung unter den einzelnen Beständen (A-E) aussieht.
-
-# Daten Aufbereitung
-
-```{r}
-#Testbereich, keine endgültige Aufbearbeitung
-glimpse(bib_bestand)
 
 #Die Funktion gibt die Anzahl der Einträge in Publication Date zurück, bei denen ein Wert vorhanden ist: 8462
 bib_gefiltert<-bib_bestand$publication_date
 sum(!is.na(bib_bestand$publication_date))
-
-```
-
-```{r}
-
-
 
 #2 Aus der Spalte "Publication Date" das Minuszeichen entfernen, da sonst eine Sortierung nach Jahreszahlen (auch filter) nicht möglich ist.
 
@@ -104,7 +46,7 @@ bib_gefiltert_1600_2025_A <- filter(
 #Visualisierung
 ggplot(bib_gefiltert_1600_2025_A, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Bibliotheksbestand A nach Veröffentlichungszeit der einzelnen Medien",
-         subtitle="in der StAZH Bibliothek")+theme_stat()
+                  subtitle="in der StAZH Bibliothek")+theme_stat()
 
 #B Schweizer Geschichte
 bib_gefiltert_1600_2025_B <- filter(
@@ -114,7 +56,7 @@ bib_gefiltert_1600_2025_B <- filter(
 #Visualisierung
 ggplot(bib_gefiltert_1600_2025_B, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Bibliotheksbestand B nach Veröffentlichungszeit der einzelnen Medien",
-         subtitle="in der StAZH Bibliothek")+theme_stat()
+                  subtitle="in der StAZH Bibliothek")+theme_stat()
 
 #C Geschichte der Kantone
 bib_gefiltert_1600_2025_C <- filter(
@@ -124,7 +66,7 @@ bib_gefiltert_1600_2025_C <- filter(
 #Visualisierung
 ggplot(bib_gefiltert_1600_2025_C, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Bibliotheksbestand C nach Veröffentlichungszeit der einzelnen Medien",
-         subtitle="in der StAZH Bibliothek")+theme_stat()
+                  subtitle="in der StAZH Bibliothek")+theme_stat()
 
 #D Zürcher Geschichte
 bib_gefiltert_1600_2025_D <- filter(
@@ -134,7 +76,7 @@ bib_gefiltert_1600_2025_D <- filter(
 #Visualisierung
 ggplot(bib_gefiltert_1600_2025_D, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Bibliotheksbestand D nach Veröffentlichungszeit der einzelnen Medien",
-         subtitle="in der StAZH Bibliothek")+theme_stat()
+                  subtitle="in der StAZH Bibliothek")+theme_stat()
 
 #E Hilfswissenschaften
 bib_gefiltert_1600_2025_E <- filter(
@@ -144,32 +86,21 @@ bib_gefiltert_1600_2025_E <- filter(
 #Visualisierung
 ggplot(bib_gefiltert_1600_2025_E, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Bestand E nach Erscheinungsdatum d. Bücher",
-         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")
+                  subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")
 
-```
 
-# Daten Visualisierung
-
-```{r}
 #Probe-Visualisierung 
 ggplot(bib_gefiltert_1800_1850, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Publikationen 1800-1850",
-         subtitle="in der StAZH Bibliothek")
+                  subtitle="in der StAZH Bibliothek")
 
-```
-
-```{r}
 ggplot(bib_gefiltert_1600_2025_E, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Bestand E nach Erscheinungsdatum d. Bücher",
-         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")
-```
+                  subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")
 
-```{r}
+
 #Grafik über den gesamten Zeitraum mit allen Medien, welche eine Veröffentlichungsangabe haben
 ggplot(bib_bestand_besenrein, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Publikationen 1800-2025",
-         subtitle="in der StAZH Bibliothek")
+                  subtitle="in der StAZH Bibliothek")
 
-```
-
-# Schlussfolgerungen
