@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Leon Kreis">
-<meta name="dcterms.date" content="2025-04-22">
+<meta name="dcterms.date" content="2025-04-23">
 
 <title>Abschlussprojekt</title>
 <style>
@@ -65,10 +65,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="index_files/libs/quarto-html/anchor.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-3dc9094430be18c8a5aac800159ef30a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -86,8 +86,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#daten" id="toc-daten" class="nav-link" data-scroll-target="#daten">Daten</a></li>
   <li><a href="#analyseziele" id="toc-analyseziele" class="nav-link" data-scroll-target="#analyseziele">Analyseziele</a></li>
   </ul></li>
-  <li><a href="#daten-aufbereitung" id="toc-daten-aufbereitung" class="nav-link" data-scroll-target="#daten-aufbereitung">Daten Aufbereitung</a></li>
-  <li><a href="#daten-visualisierung" id="toc-daten-visualisierung" class="nav-link" data-scroll-target="#daten-visualisierung">Daten Visualisierung</a></li>
+  <li><a href="#daten-aufbereitung" id="toc-daten-aufbereitung" class="nav-link" data-scroll-target="#daten-aufbereitung">Daten Aufbereitung</a>
+  <ul class="collapse">
+  <li><a href="#fragen-an-den-datensatz" id="toc-fragen-an-den-datensatz" class="nav-link" data-scroll-target="#fragen-an-den-datensatz">Fragen an den Datensatz</a>
+  <ul class="collapse">
+  <li><a href="#welcher-bestand-enthält-durchschnittlich-die-ältesten-publikationen" id="toc-welcher-bestand-enthält-durchschnittlich-die-ältesten-publikationen" class="nav-link" data-scroll-target="#welcher-bestand-enthält-durchschnittlich-die-ältesten-publikationen">Welcher Bestand enthält durchschnittlich die ältesten Publikationen?</a></li>
+  <li><a href="#welcher-bestand-ist-am-stärksten-gewachsen-und-über-welchen-zeitraum" id="toc-welcher-bestand-ist-am-stärksten-gewachsen-und-über-welchen-zeitraum" class="nav-link" data-scroll-target="#welcher-bestand-ist-am-stärksten-gewachsen-und-über-welchen-zeitraum">Welcher Bestand ist am stärksten gewachsen (und über welchen Zeitraum)?</a></li>
+  <li><a href="#wie-viele-publikationen-haben-wir-von-bestand-x-aus-dem-jahr-x" id="toc-wie-viele-publikationen-haben-wir-von-bestand-x-aus-dem-jahr-x" class="nav-link" data-scroll-target="#wie-viele-publikationen-haben-wir-von-bestand-x-aus-dem-jahr-x">Wie viele Publikationen haben wir von Bestand X aus dem Jahr X?</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#daten-visualisierung" id="toc-daten-visualisierung" class="nav-link" data-scroll-target="#daten-visualisierung">Daten Visualisierung</a>
+  <ul class="collapse">
+  <li><a href="#a---e-gesamtbestand-1600---2025" id="toc-a---e-gesamtbestand-1600---2025" class="nav-link" data-scroll-target="#a---e-gesamtbestand-1600---2025">A - E Gesamtbestand 1600 - 2025</a></li>
+  <li><a href="#vor-1800" id="toc-vor-1800" class="nav-link" data-scroll-target="#vor-1800">Vor 1800</a>
+  <ul class="collapse">
+  <li><a href="#a" id="toc-a" class="nav-link" data-scroll-target="#a">A</a></li>
+  <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">B</a></li>
+  <li><a href="#c" id="toc-c" class="nav-link" data-scroll-target="#c">C</a></li>
+  <li><a href="#d" id="toc-d" class="nav-link" data-scroll-target="#d">D</a></li>
+  <li><a href="#e" id="toc-e" class="nav-link" data-scroll-target="#e">E</a></li>
+  </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1800 - 1850</a>
+  <ul class="collapse">
+  <li><a href="#a-1" id="toc-a-1" class="nav-link" data-scroll-target="#a-1">A</a></li>
+  <li><a href="#b-1" id="toc-b-1" class="nav-link" data-scroll-target="#b-1">B</a></li>
+  <li><a href="#c-1" id="toc-c-1" class="nav-link" data-scroll-target="#c-1">C</a></li>
+  <li><a href="#d-1" id="toc-d-1" class="nav-link" data-scroll-target="#d-1">D</a></li>
+  <li><a href="#e-1" id="toc-e-1" class="nav-link" data-scroll-target="#e-1">E</a></li>
+  </ul></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">1851 - 1899</a>
+  <ul class="collapse">
+  <li><a href="#a-2" id="toc-a-2" class="nav-link" data-scroll-target="#a-2">A</a></li>
+  <li><a href="#b-2" id="toc-b-2" class="nav-link" data-scroll-target="#b-2">B</a></li>
+  <li><a href="#c-2" id="toc-c-2" class="nav-link" data-scroll-target="#c-2">C</a></li>
+  <li><a href="#d-2" id="toc-d-2" class="nav-link" data-scroll-target="#d-2">D</a></li>
+  <li><a href="#e-2" id="toc-e-2" class="nav-link" data-scroll-target="#e-2">E</a></li>
+  </ul></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">1900 - 1950</a>
+  <ul class="collapse">
+  <li><a href="#a-3" id="toc-a-3" class="nav-link" data-scroll-target="#a-3">A</a></li>
+  <li><a href="#b-3" id="toc-b-3" class="nav-link" data-scroll-target="#b-3">B</a></li>
+  <li><a href="#c-3" id="toc-c-3" class="nav-link" data-scroll-target="#c-3">C</a></li>
+  <li><a href="#d-3" id="toc-d-3" class="nav-link" data-scroll-target="#d-3">D</a></li>
+  <li><a href="#e-3" id="toc-e-3" class="nav-link" data-scroll-target="#e-3">E</a></li>
+  </ul></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">1951 - 1999</a>
+  <ul class="collapse">
+  <li><a href="#a-4" id="toc-a-4" class="nav-link" data-scroll-target="#a-4">A</a></li>
+  <li><a href="#b-4" id="toc-b-4" class="nav-link" data-scroll-target="#b-4">B</a></li>
+  <li><a href="#c-4" id="toc-c-4" class="nav-link" data-scroll-target="#c-4">C</a></li>
+  <li><a href="#d-4" id="toc-d-4" class="nav-link" data-scroll-target="#d-4">D</a></li>
+  <li><a href="#e-4" id="toc-e-4" class="nav-link" data-scroll-target="#e-4">E</a></li>
+  </ul></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">2000 - 2025</a>
+  <ul class="collapse">
+  <li><a href="#a-5" id="toc-a-5" class="nav-link" data-scroll-target="#a-5">A</a></li>
+  <li><a href="#b-5" id="toc-b-5" class="nav-link" data-scroll-target="#b-5">B</a></li>
+  <li><a href="#c-5" id="toc-c-5" class="nav-link" data-scroll-target="#c-5">C</a></li>
+  <li><a href="#d-5" id="toc-d-5" class="nav-link" data-scroll-target="#d-5">D</a></li>
+  <li><a href="#e-5" id="toc-e-5" class="nav-link" data-scroll-target="#e-5">E</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#schlussfolgerungen" id="toc-schlussfolgerungen" class="nav-link" data-scroll-target="#schlussfolgerungen">Schlussfolgerungen</a></li>
   </ul>
 </nav>
@@ -113,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 22, 2025</p>
+      <p class="date">April 23, 2025</p>
     </div>
   </div>
   
@@ -134,41 +193,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(statR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bib_bestand <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"daten/raw/R_Projekt.xlsx"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>() </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(bib_bestand)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 140,122
-Columns: 16
-$ mms_id                 &lt;chr&gt; "99116745557205526,,Revue / Keramik-Freunde der…
-$ author                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ title                  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "An…
-$ publication_date       &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 184…
-$ permanent_call_number  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "Un…
-$ normalized_call_number &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ item_call_number       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "Dc…
-$ description            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "28…
-$ barcode                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "RZ…
-$ item_policy            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "71…
-$ base_status            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "It…
-$ process_type           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "No…
-$ library_code           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "US…
-$ library_name           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "St…
-$ location_code          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "UL…
-$ location_name          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "St…</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Daten Transformation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <section id="einleitung" class="level1">
 <h1>Einleitung</h1>
 <p>In diesem R-Projekt versuche ich unseren Bibliotheks-Bestand nach dem Jahr der Veröffentlichung der einzelnen Medien aufzustellen. Konkret also lautet die Frage: “Wie viele Bücher haben wir, welche z.Bsp. 1950 publiziert wurden?”</p>
 <section id="daten" class="level2">
 <h2 class="anchored" data-anchor-id="daten">Daten</h2>
 <p>Bei den verwendeten Daten handelt es sich um eine Bestandesliste aller Datensätze in der Bibliothek des Staatsarchiv ZH. Diese wurde von SLSP (Swiss Librarian Service Platform) produziert und zur Verfügung gestellt. Mit ALMA, dem von uns verwendeten Bibliotheksprogramm, sind die Datensätze auf 100’000 Zeilen limitiert, daher war es einfacher, direkt beim Anbieter anzufragen, anstatt selbst etwas zusammen zu basteln.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bib_bestand <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"daten/raw/R_Projekt.xlsx"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">capture.output</span>(<span class="fu">glimpse</span>(bib_bestand)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="analyseziele" class="level2">
 <h2 class="anchored" data-anchor-id="analyseziele">Analyseziele</h2>
@@ -178,93 +214,52 @@ $ location_name          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
 <section id="daten-aufbereitung" class="level1">
 <h1>Daten Aufbereitung</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Testbereich, keine endgültige Aufbearbeitung</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(bib_bestand)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 140,122
-Columns: 16
-$ mms_id                 &lt;chr&gt; "99116745557205526,,Revue / Keramik-Freunde der…
-$ author                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ title                  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "An…
-$ publication_date       &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 184…
-$ permanent_call_number  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "Un…
-$ normalized_call_number &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ item_call_number       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "Dc…
-$ description            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "28…
-$ barcode                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "RZ…
-$ item_policy            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "71…
-$ base_status            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "It…
-$ process_type           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "No…
-$ library_code           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "US…
-$ library_name           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "St…
-$ location_code          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "UL…
-$ location_name          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "St…</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Die Funktion gibt die Anzahl der Einträge in Publication Date zurück, bei denen ein Wert vorhanden ist: 8462</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>bib_gefiltert<span class="ot">&lt;-</span>bib_bestand<span class="sc">$</span>publication_date</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(bib_bestand<span class="sc">$</span>publication_date))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Testbereich, keine endgültige Aufbearbeitung</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">capture.output</span>(<span class="fu">glimpse</span>(bib_bestand)))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Die Funktion gibt die Anzahl der Einträge in Publication Date zurück, bei denen ein Wert vorhanden ist: 8462</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>bib_gefiltert<span class="ot">&lt;-</span>bib_bestand<span class="sc">$</span>publication_date</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(bib_bestand<span class="sc">$</span>publication_date))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 8462</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#2 Aus der Spalte "Publication Date" das Minuszeichen entfernen, da sonst eine Sortierung nach Jahreszahlen (auch filter) nicht möglich ist.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>bib_bestand_besenrein <span class="ot">&lt;-</span> bib_bestand</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>bib_bestand_besenrein<span class="sc">$</span>publication_date <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"-"</span>, <span class="st">""</span>, bib_bestand_besenrein<span class="sc">$</span>publication_date)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">capture.output</span>(<span class="fu">glimpse</span>(bib_bestand_besenrein)))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">#3 Einzig die Spalte publication_date aus dem Datensatz extrahiert.    </span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>bib_nur_publikation <span class="ot">&lt;-</span> <span class="fu">subset</span>(bib_bestand_besenrein, <span class="at">select =</span> publication_date)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">#4 In nummerischen Vektor umgewandelt für den Filter nach Jahreszahlen</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>bib_bestand_besenrein<span class="sc">$</span>publication_date <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(bib_bestand_besenrein<span class="sc">$</span>publication_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#2 Aus der Spalte "Publication Date" das Minuszeichen entfernen, da sonst eine Sortierung nach Jahreszahlen (auch filter) nicht möglich ist.</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>bib_bestand_besenrein <span class="ot">&lt;-</span> bib_bestand</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>bib_bestand_besenrein<span class="sc">$</span>publication_date <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"-"</span>, <span class="st">""</span>, bib_bestand_besenrein<span class="sc">$</span>publication_date)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(bib_bestand_besenrein)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 140,122
-Columns: 16
-$ mms_id                 &lt;chr&gt; "99116745557205526,,Revue / Keramik-Freunde der…
-$ author                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ title                  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "An…
-$ publication_date       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "18…
-$ permanent_call_number  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "Un…
-$ normalized_call_number &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ item_call_number       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "Dc…
-$ description            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "28…
-$ barcode                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "RZ…
-$ item_policy            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "71…
-$ base_status            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "It…
-$ process_type           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "No…
-$ library_code           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "US…
-$ library_name           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "St…
-$ location_code          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "UL…
-$ location_name          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "St…</code></pre>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_vor_1800 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein,(publication_date <span class="sc">&lt;=</span><span class="dv">1800</span>))</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1800_1850 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1800</span>, <span class="dv">1850</span>))</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1851_1899 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">1850</span>, <span class="dv">1900</span>)) </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1900_1950 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">1900</span>, <span class="dv">1950</span>)) </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1951_1999 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">1951</span>, <span class="dv">1999</span>)) </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_2000_2050 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">2000</span>, <span class="dv">2050</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#3 Einzig die Spalte publication_date aus dem Datensatz extrahiert.    </span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>bib_nur_publikation <span class="ot">&lt;-</span> <span class="fu">subset</span>(bib_bestand_besenrein, <span class="at">select =</span> publication_date)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#4 In nummerischen Vektor umgewandelt für den Filter nach Jahreszahlen</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>bib_bestand_besenrein<span class="sc">$</span>publication_date <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(bib_bestand_besenrein<span class="sc">$</span>publication_date)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#5 In 50er-Jahr-Schritten jeweils die einzelnen Veröffentlichungsdaten aus "bib_bestand_besenrein" gefiltert, um daraus am Ende 6 Grafiken erstellen zu können. </span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_vor_1800 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein,(publication_date <span class="sc">&lt;=</span><span class="dv">1800</span>))</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1800_1850 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1800</span>, <span class="dv">1850</span>))</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1851_1899 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">1850</span>, <span class="dv">1900</span>)) </span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1900_1950 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">1900</span>, <span class="dv">1950</span>)) </span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1951_1999 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">1951</span>, <span class="dv">1999</span>)) </span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_2000_2050 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">2000</span>, <span class="dv">2050</span>)) </span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co">#Versuch, nun auch noch nach der jeweiligen Standort-Signatur (A-E) zu sortieren</span></span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co">#A Geschichte des Auslands</span></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_A <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>  bib_bestand_besenrein,</span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">between</span>(publication_date, <span class="dv">1600</span>, <span class="dv">2025</span>),</span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"A.*III|III.*A"</span>, permanent_call_number))</span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="co">#Visualisierung</span></span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_A, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bibliotheksbestand A nach Veröffentlichungszeit der einzelnen Medien"</span>,</span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Versuch, nun auch noch nach der jeweiligen Standort-Signatur (A-E) zu sortieren</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#A Geschichte des Auslands</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_A <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  bib_bestand_besenrein,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">between</span>(publication_date, <span class="dv">1600</span>, <span class="dv">2025</span>),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"A.*III|III.*A"</span>, permanent_call_number))</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Visualisierung</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_A, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bibliotheksbestand A nach Veröffentlichungszeit der einzelnen Medien"</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>                  <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -272,15 +267,15 @@ $ location_name          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#B Schweizer Geschichte</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_B <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  bib_bestand_besenrein,</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">between</span>(publication_date, <span class="dv">1600</span>, <span class="dv">2025</span>),</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^B"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"B.*III|III.*B"</span>, permanent_call_number))</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Visualisierung</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_B, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bibliotheksbestand B nach Veröffentlichungszeit der einzelnen Medien"</span>,</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#B Schweizer Geschichte</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_B <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  bib_bestand_besenrein,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">between</span>(publication_date, <span class="dv">1600</span>, <span class="dv">2025</span>),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^B"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"B.*III|III.*B"</span>, permanent_call_number))</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Visualisierung</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_B, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bibliotheksbestand B nach Veröffentlichungszeit der einzelnen Medien"</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                  <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -288,15 +283,15 @@ $ location_name          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#C Geschichte der Kantone</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_C <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  bib_bestand_besenrein,</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">between</span>(publication_date, <span class="dv">1600</span>, <span class="dv">2025</span>),</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^C"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"C.*III|III.*C"</span>, permanent_call_number))</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Visualisierung</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_C, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bibliotheksbestand C nach Veröffentlichungszeit der einzelnen Medien"</span>,</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#C Geschichte der Kantone</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_C <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  bib_bestand_besenrein,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">between</span>(publication_date, <span class="dv">1600</span>, <span class="dv">2025</span>),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^C"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"C.*III|III.*C"</span>, permanent_call_number))</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Visualisierung</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_C, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bibliotheksbestand C nach Veröffentlichungszeit der einzelnen Medien"</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>                  <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -304,15 +299,15 @@ $ location_name          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#D Zürcher Geschichte</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_D <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  bib_bestand_besenrein,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">between</span>(publication_date, <span class="dv">1600</span>, <span class="dv">2025</span>),</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^D"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"D.*III|III.*D"</span>, permanent_call_number))</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Visualisierung</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_D, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bibliotheksbestand D nach Veröffentlichungszeit der einzelnen Medien"</span>,</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#D Zürcher Geschichte</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_D <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  bib_bestand_besenrein,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">between</span>(publication_date, <span class="dv">1600</span>, <span class="dv">2025</span>),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^D"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"D.*III|III.*D"</span>, permanent_call_number))</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Visualisierung</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_D, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bibliotheksbestand D nach Veröffentlichungszeit der einzelnen Medien"</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>                  <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -320,15 +315,15 @@ $ location_name          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#E Hilfswissenschaften</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_E <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  bib_bestand_besenrein,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">between</span>(publication_date, <span class="dv">1600</span>, <span class="dv">2025</span>),</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^E"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"E.*III|III.*E"</span>, permanent_call_number))</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Visualisierung</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_E, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand E nach Erscheinungsdatum d. Bücher"</span>,</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#E Hilfswissenschaften</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_E <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  bib_bestand_besenrein,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">between</span>(publication_date, <span class="dv">1600</span>, <span class="dv">2025</span>),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^E"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"E.*III|III.*E"</span>, permanent_call_number))</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Visualisierung</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_E, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand E nach Erscheinungsdatum d. Bücher"</span>,</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>                  <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -337,60 +332,35 @@ $ location_name          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
 </div>
 </div>
 </div>
+<section id="fragen-an-den-datensatz" class="level2">
+<h2 class="anchored" data-anchor-id="fragen-an-den-datensatz">Fragen an den Datensatz</h2>
+<section id="welcher-bestand-enthält-durchschnittlich-die-ältesten-publikationen" class="level3">
+<h3 class="anchored" data-anchor-id="welcher-bestand-enthält-durchschnittlich-die-ältesten-publikationen">Welcher Bestand enthält durchschnittlich die ältesten Publikationen?</h3>
+</section>
+<section id="welcher-bestand-ist-am-stärksten-gewachsen-und-über-welchen-zeitraum" class="level3">
+<h3 class="anchored" data-anchor-id="welcher-bestand-ist-am-stärksten-gewachsen-und-über-welchen-zeitraum">Welcher Bestand ist am stärksten gewachsen (und über welchen Zeitraum)?</h3>
+</section>
+<section id="wie-viele-publikationen-haben-wir-von-bestand-x-aus-dem-jahr-x" class="level3">
+<h3 class="anchored" data-anchor-id="wie-viele-publikationen-haben-wir-von-bestand-x-aus-dem-jahr-x">Wie viele Publikationen haben wir von Bestand X aus dem Jahr X?</h3>
+</section>
+</section>
 </section>
 <section id="daten-visualisierung" class="level1">
 <h1>Daten Visualisierung</h1>
+<p>In gewissen Bestände, haben wir aus einer bestimmten Zeitspanne weniger als 10 Publikationen. Diese habe ich graphisch nicht dargestellt.</p>
+<section id="a---e-gesamtbestand-1600---2025" class="level2">
+<h2 class="anchored" data-anchor-id="a---e-gesamtbestand-1600---2025">A - E Gesamtbestand 1600 - 2025</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Probe-Visualisierung </span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1800_1850, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Publikationen 1800-1850"</span>,</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_bestand_besenrein, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand A nach Erscheinungsdatum (vor 1800)"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"purple"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 131660 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
 </div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1600_2025_E</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1,354 × 16
-   mms_id             author title        publication_date permanent_call_number
-   &lt;chr&gt;              &lt;chr&gt;  &lt;chr&gt;                   &lt;dbl&gt; &lt;chr&gt;                
- 1 990010060780205526 &lt;NA&gt;   Jahresberic…             1918 Ea 95                
- 2 990010060780205526 &lt;NA&gt;   Jahresberic…             1918 Ea 95                
- 3 990010060780205526 &lt;NA&gt;   Jahresberic…             1918 Ea 95                
- 4 990010060780205526 &lt;NA&gt;   Jahresberic…             1918 Ea 95                
- 5 990010060780205526 &lt;NA&gt;   Jahresberic…             1918 Ea 95                
- 6 990005195680205526 &lt;NA&gt;   History &amp; c…             1989 Ea 690               
- 7 990005195680205526 &lt;NA&gt;   History &amp; c…             1989 Ea 690               
- 8 990005391320205526 &lt;NA&gt;   Geschichte …             1990 Ea 695/5-6           
- 9 990005391320205526 &lt;NA&gt;   Geschichte …             1990 Ea 695/7-8           
-10 990005391320205526 &lt;NA&gt;   Geschichte …             1990 Ea 695/10            
-# ℹ 1,344 more rows
-# ℹ 11 more variables: normalized_call_number &lt;chr&gt;, item_call_number &lt;chr&gt;,
-#   description &lt;chr&gt;, barcode &lt;chr&gt;, item_policy &lt;chr&gt;, base_status &lt;chr&gt;,
-#   process_type &lt;chr&gt;, library_code &lt;chr&gt;, library_name &lt;chr&gt;,
-#   location_code &lt;chr&gt;, location_name &lt;chr&gt;</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_E, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand E nach Erscheinungsdatum d. Bücher"</span>,</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Grafik über den gesamten Zeitraum mit allen Medien, welche eine Veröffentlichungsangabe haben</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_bestand_besenrein, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Publikationen 1800-2025"</span>,</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 131660 rows containing non-finite outside the scale range
 (`stat_count()`).</code></pre>
@@ -398,11 +368,527 @@ $ location_name          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
+</section>
+<section id="vor-1800" class="level2">
+<h2 class="anchored" data-anchor-id="vor-1800">Vor 1800</h2>
+<section id="a" class="level3">
+<h3 class="anchored" data-anchor-id="a">A</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_vor_1800_A <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein,(publication_date <span class="sc">&lt;=</span><span class="dv">1800</span>),<span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"A.*III|III.*A"</span>, permanent_call_number))</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_vor_1800_A, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand A nach Erscheinungsdatum (vor 1800)"</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"steelblue"</span>)<span class="sc">+</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1600</span>, <span class="dv">1800</span>, <span class="at">by =</span> <span class="dv">25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_vor_1800_A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1    81</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(bib_gefiltert_vor_1800_A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 81 × 16
+   mms_id                    author title publication_date permanent_call_number
+   &lt;chr&gt;                     &lt;chr&gt;  &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;                
+ 1 "990091327050205526"      "Sinc… "Die…             1726 Archivabt.: B VIII 3…
+ 2 "990090920720205526,\"Fa… "&amp; me… "&amp; C…             1652 Archivabt.: E II 18  
+ 3 "990092475440205526"       &lt;NA&gt;  "Neu…             1682 III AAf 0 LS         
+ 4 "990092475440205526"       &lt;NA&gt;  "Neu…             1682 III AAf 0 LS         
+ 5 "990092475440205526"       &lt;NA&gt;  "Neu…             1682 III AAf 0 LS         
+ 6 "990092475440205526"       &lt;NA&gt;  "Neu…             1682 III AAf 0 LS         
+ 7 "990092475440205526"       &lt;NA&gt;  "Neu…             1682 III AAf 0 LS         
+ 8 "990092475440205526"       &lt;NA&gt;  "Neu…             1682 III AAf 0 LS         
+ 9 "990092475440205526"       &lt;NA&gt;  "Neu…             1682 III AAf 0 LS         
+10 "990092475440205526"       &lt;NA&gt;  "Neu…             1682 III AAf 0 LS         
+# ℹ 71 more rows
+# ℹ 11 more variables: normalized_call_number &lt;chr&gt;, item_call_number &lt;chr&gt;,
+#   description &lt;chr&gt;, barcode &lt;chr&gt;, item_policy &lt;chr&gt;, base_status &lt;chr&gt;,
+#   process_type &lt;chr&gt;, library_code &lt;chr&gt;, library_name &lt;chr&gt;,
+#   location_code &lt;chr&gt;, location_name &lt;chr&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="b" class="level3">
+<h3 class="anchored" data-anchor-id="b">B</h3>
+<p>In unserem B-Bestand befinden sich zwischen 1600 und 1800 nur 3 Medien. Diese erschienen1726, 1787 und 1791. Hier verzichte ich auf eine graphische Darstellung.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_vor_1800_B <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein,(publication_date <span class="sc">&lt;=</span><span class="dv">1800</span>),<span class="fu">grepl</span>(<span class="st">"^B"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"B.*III|III.*B"</span>, permanent_call_number))</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">capture.output</span>(<span class="fu">glimpse</span>(bib_gefiltert_vor_1800_B)))</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Rows: 3</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Columns: 16</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_vor_1800_B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1     3</code></pre>
+</div>
+</div>
+</section>
+<section id="c" class="level3">
+<h3 class="anchored" data-anchor-id="c">C</h3>
+<p>In unserem C-Bestand befinden sich zwischen 1600 und 1800 nur 2 Medien. Diese erschienen 1652 und 1726. Hier verzichte ich auf eine graphische Darstellung.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_vor_1800_C <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein,(publication_date <span class="sc">&lt;=</span><span class="dv">1800</span>),<span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"C.*III|III.*C"</span>, permanent_call_number))</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">capture.output</span>(<span class="fu">glimpse</span>(bib_gefiltert_vor_1800_C)))</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Rows: 2</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Columns: 16</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_vor_1800_C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1     2</code></pre>
+</div>
+</div>
+</section>
+<section id="d" class="level3">
+<h3 class="anchored" data-anchor-id="d">D</h3>
+<p>In unserem D-Bestand befinden sich zwischen 1600 und 1800 nur 2 Medien. Diese erschienen 1652 und 1726. Hier verzichte ich auf eine graphische Darstellung.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_vor_1800_D <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein,(publication_date <span class="sc">&lt;=</span><span class="dv">1800</span>),<span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"D.*III|III.*D"</span>, permanent_call_number))</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">capture.output</span>(<span class="fu">glimpse</span>(bib_gefiltert_vor_1800_D)))</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Rows: 2</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Columns: 16</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_vor_1800_D)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1     2</code></pre>
+</div>
+</div>
+</section>
+<section id="e" class="level3">
+<h3 class="anchored" data-anchor-id="e">E</h3>
+<p>In unserem E-Bestand befinden sich zwischen 1600 und 1800 nur 2 Medien. Diese erschienen 1652 und 1726. Hier verzichte ich auf eine graphische Darstellung.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_vor_1800_E <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein,(publication_date <span class="sc">&lt;=</span><span class="dv">1800</span>),<span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"E.*III|III.*E"</span>, permanent_call_number))</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">capture.output</span>(<span class="fu">glimpse</span>(bib_gefiltert_vor_1800_E)))</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Rows: 2</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Columns: 16</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_vor_1800_E)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1     2</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">1800 - 1850</h2>
+<section id="a-1" class="level3">
+<h3 class="anchored" data-anchor-id="a-1">A</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1800_1850_A <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1800</span>, <span class="dv">1850</span>),<span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"A.*III|III.*A"</span>, permanent_call_number))</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1800_1850_A, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand A nach Erscheinungsdatum (1800-1850)"</span>,</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"steelblue"</span>)<span class="sc">+</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1800</span>, <span class="dv">1850</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1800_1850_A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1   187</code></pre>
+</div>
+</div>
+</section>
+<section id="b-1" class="level3">
+<h3 class="anchored" data-anchor-id="b-1">B</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1800_1850_B <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1800</span>, <span class="dv">1850</span>),<span class="fu">grepl</span>(<span class="st">"^B"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"B.*III|III.*B"</span>, permanent_call_number))</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1800_1850_B, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand B nach Erscheinungsdatum (1800-1850)"</span>,</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue1"</span>)<span class="sc">+</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1800</span>, <span class="dv">1850</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1800_1850_B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1    24</code></pre>
+</div>
+</div>
+</section>
+<section id="c-1" class="level3">
+<h3 class="anchored" data-anchor-id="c-1">C</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1800_1850_C <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1800</span>, <span class="dv">1850</span>),<span class="fu">grepl</span>(<span class="st">"^C"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"C.*III|III.*C"</span>, permanent_call_number))</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1800_1850_C, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand C nach Erscheinungsdatum (1800-1850)"</span>,</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1800</span>, <span class="dv">1850</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1800_1850_C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1    86</code></pre>
+</div>
+</div>
+</section>
+<section id="d-1" class="level3">
+<h3 class="anchored" data-anchor-id="d-1">D</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1800_1850_D <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1800</span>, <span class="dv">1850</span>),<span class="fu">grepl</span>(<span class="st">"^D"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"C.*III|III.*D"</span>, permanent_call_number))</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1800_1850_D, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand D nach Erscheinungsdatum (1800-1850)"</span>,</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue4"</span>)<span class="sc">+</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1800</span>, <span class="dv">1850</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1800_1850_D)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1    47</code></pre>
+</div>
+</div>
+</section>
+<section id="e-1" class="level3">
+<h3 class="anchored" data-anchor-id="e-1">E</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1800_1850_E <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1800</span>, <span class="dv">1850</span>),<span class="fu">grepl</span>(<span class="st">"^E"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"E.*III|III.*E"</span>, permanent_call_number))</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1800_1850_E, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand E nach Erscheinungsdatum (1800-1850)"</span>,</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue4"</span>)<span class="sc">+</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1800</span>, <span class="dv">1850</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1800_1850_E)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1   211</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">1851 - 1899</h2>
+<section id="a-2" class="level3">
+<h3 class="anchored" data-anchor-id="a-2">A</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1851_1899_A <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1851</span>, <span class="dv">1899</span>),<span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"A.*III|III.*A"</span>, permanent_call_number))</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1851_1899_A, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand A nach Erscheinungsdatum (1851-1899)"</span>,</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"steelblue"</span>)<span class="sc">+</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1851</span>, <span class="dv">1899</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1851_1899_A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1   135</code></pre>
+</div>
+</div>
+</section>
+<section id="b-2" class="level3">
+<h3 class="anchored" data-anchor-id="b-2">B</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1851_1899_B <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1851</span>, <span class="dv">1899</span>),<span class="fu">grepl</span>(<span class="st">"^B"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"B.*III|III.*B"</span>, permanent_call_number))</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1851_1899_B, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand B nach Erscheinungsdatum (1851-1899)"</span>,</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1851</span>, <span class="dv">1899</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1851_1899_B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1    47</code></pre>
+</div>
+</div>
+</section>
+<section id="c-2" class="level3">
+<h3 class="anchored" data-anchor-id="c-2">C</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1851_1899_C <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1851</span>, <span class="dv">1899</span>),<span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"C.*III|III.*C"</span>, permanent_call_number))</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1851_1899_C, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand C nach Erscheinungsdatum (1851-1899)"</span>,</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue3"</span>)<span class="sc">+</span></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1851</span>, <span class="dv">1899</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1851_1899_C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1   273</code></pre>
+</div>
+</div>
+</section>
+<section id="d-2" class="level3">
+<h3 class="anchored" data-anchor-id="d-2">D</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1851_1899_D <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1851</span>, <span class="dv">1899</span>),<span class="fu">grepl</span>(<span class="st">"^D"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"D.*III|III.*D"</span>, permanent_call_number))</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1851_1899_D, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand D nach Erscheinungsdatum (1851-1899)"</span>,</span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue3"</span>)<span class="sc">+</span></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1851</span>, <span class="dv">1899</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1851_1899_D)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1   183</code></pre>
+</div>
+</div>
+</section>
+<section id="e-2" class="level3">
+<h3 class="anchored" data-anchor-id="e-2">E</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1851_1899_E <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand, <span class="fu">between</span>(publication_date, <span class="dv">1851</span>, <span class="dv">1899</span>),<span class="fu">grepl</span>(<span class="st">"^E"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"E.*III|III.*E"</span>, permanent_call_number))</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1851_1899_E, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand E nach Erscheinungsdatum (1851-1899)"</span>,</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue3"</span>)<span class="sc">+</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1851</span>, <span class="dv">1899</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1851_1899_E)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1   187</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">1900 - 1950</h2>
+<section id="a-3" class="level3">
+<h3 class="anchored" data-anchor-id="a-3">A</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1900_1950_A <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">1900</span>, <span class="dv">1950</span>),<span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"A.*III|III.*A"</span>, permanent_call_number))</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1900_1950_A, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand A nach Erscheinungsdatum (1900-1950)"</span>,</span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue3"</span>)<span class="sc">+</span></span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1900</span>, <span class="dv">1950</span>, <span class="at">by =</span> <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1900_1950_A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1    10</code></pre>
+</div>
+</div>
+</section>
+<section id="b-3" class="level3">
+<h3 class="anchored" data-anchor-id="b-3">B</h3>
+<p>In unserem B-Bestand befinden sich zwischen 1900 und 1950 nur 5 Medien. Diese erschienen 1907, 1934, 1937, 1948 und 1950. Hier verzichte ich auf eine graphische Darstellung.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1900_1950_B <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">1900</span>, <span class="dv">1950</span>),<span class="fu">grepl</span>(<span class="st">"^A"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"B.*III|III.*B"</span>, permanent_call_number))</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">capture.output</span>(<span class="fu">glimpse</span>(bib_gefiltert_1900_1950_B)))</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Rows: 5</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Columns: 16</span></span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1900_1950_B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1     5</code></pre>
+</div>
+</div>
+</section>
+<section id="c-3" class="level3">
+<h3 class="anchored" data-anchor-id="c-3">C</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>bib_gefiltert_1900_1950_C <span class="ot">&lt;-</span> <span class="fu">filter</span>(bib_bestand_besenrein, <span class="fu">between</span>(publication_date, <span class="dv">1900</span>, <span class="dv">1950</span>),<span class="fu">grepl</span>(<span class="st">"^C"</span>, permanent_call_number) <span class="sc">|</span> <span class="fu">grepl</span>(<span class="st">"C.*III|III.*C"</span>, permanent_call_number))</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1900_1950_C, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand C nach Erscheinungsdatum (1900-1950)"</span>,</span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue3"</span>)<span class="sc">+</span></span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1900</span>, <span class="dv">1950</span>, <span class="at">by =</span> <span class="dv">5</span>))<span class="sc">+</span><span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span><span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(bib_gefiltert_1900_1950_C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1   185</code></pre>
+</div>
+</div>
+</section>
+<section id="d-3" class="level3">
+<h3 class="anchored" data-anchor-id="d-3">D</h3>
+</section>
+<section id="e-3" class="level3">
+<h3 class="anchored" data-anchor-id="e-3">E</h3>
+</section>
+</section>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3">1951 - 1999</h2>
+<section id="a-4" class="level3">
+<h3 class="anchored" data-anchor-id="a-4">A</h3>
+</section>
+<section id="b-4" class="level3">
+<h3 class="anchored" data-anchor-id="b-4">B</h3>
+</section>
+<section id="c-4" class="level3">
+<h3 class="anchored" data-anchor-id="c-4">C</h3>
+</section>
+<section id="d-4" class="level3">
+<h3 class="anchored" data-anchor-id="d-4">D</h3>
+</section>
+<section id="e-4" class="level3">
+<h3 class="anchored" data-anchor-id="e-4">E</h3>
+</section>
+</section>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4">2000 - 2025</h2>
+<section id="a-5" class="level3">
+<h3 class="anchored" data-anchor-id="a-5">A</h3>
+</section>
+<section id="b-5" class="level3">
+<h3 class="anchored" data-anchor-id="b-5">B</h3>
+</section>
+<section id="c-5" class="level3">
+<h3 class="anchored" data-anchor-id="c-5">C</h3>
+</section>
+<section id="d-5" class="level3">
+<h3 class="anchored" data-anchor-id="d-5">D</h3>
+</section>
+<section id="e-5" class="level3">
+<h3 class="anchored" data-anchor-id="e-5">E</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Probe-Visualisierung </span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1800_1850, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Publikationen 1800-1850"</span>,</span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bib_gefiltert_1600_2025_E, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>publication_date))<span class="sc">+</span></span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bestand E nach Erscheinungsdatum d. Bücher"</span>,</span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle=</span><span class="st">"in der StAZH Bibliothek"</span>)<span class="sc">+</span><span class="fu">theme_stat</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Erscheinungsdatum"</span>, <span class="at">y =</span> <span class="st">"Anzahl Medien"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 <section id="schlussfolgerungen" class="level1">
 <h1>Schlussfolgerungen</h1>
@@ -492,8 +978,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -604,7 +1088,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
