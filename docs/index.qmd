@@ -1,6 +1,6 @@
 ---
 title: "Abschlussprojekt"
-author: "Leon Kreis"
+author: "Tom Bombadil"
 date: "`r Sys.Date()`"
 format: html
 toc: true
@@ -8,6 +8,7 @@ toc: true
 
 ```{r}
 #| message: false
+#| warning: false
 
 library(tidyverse)
 library(ggplot2)
@@ -16,15 +17,18 @@ library(readr)
 library(readxl)
 library(devtools)
 library(statR)
+library(knitr)
 ```
+
+![Bibliothek](/cloud/project/images/2112_lesesaal_stazh.jpg){#fig-bibliothek}
 
 # Einleitung
 
-In diesem R-Projekt versuche ich unseren Bibliotheks-Bestand nach dem Jahr der Veröffentlichung der einzelnen Medien aufzustellen. Konkret also lautet die Frage: "Wie viele Bücher haben wir, welche z.Bsp. 1950 publiziert wurden?"
+In diesem R-Projekt versuche ich unseren Bibliotheks-Bestand nach dem Jahr der Veröffentlichung der einzelnen Medien aufzustellen. Konkret also lautet die Frage: "Wie viele Exemplare haben wir, welche z.Bsp. 1950 publiziert wurden im Bestand xy stehen?"
 
 ## Daten
 
-Bei den verwendeten Daten handelt es sich um eine Bestandesliste aller Datensätze in der Bibliothek des Staatsarchiv ZH. Diese wurde von SLSP (Swiss Librarian Service Platform) produziert und zur Verfügung gestellt. Mit ALMA, dem von uns verwendeten Bibliotheksprogramm, sind die Datensätze auf 100'000 Zeilen limitiert, daher war es einfacher, direkt beim Anbieter anzufragen, anstatt selbst etwas zusammen zu basteln.
+Bei den verwendeten Daten handelt es sich um eine Bestandesliste aller Exemplare in der Bibliothek des Staatsarchiv ZH. Diese wurde von SLSP (Swiss Librarian Service Platform) produziert und zur Verfügung gestellt. Mit ALMA, dem von uns verwendeten Bibliotheksprogramm, sind die Datensätze auf 100'000 Zeilen limitiert, daher war es einfacher, direkt beim Anbieter anzufragen, anstatt selbst etwas zu basteln.
 
 ```{r}
 bib_bestand <- read_excel(here::here("daten/raw/R_Projekt.xlsx")) |> 
@@ -35,7 +39,7 @@ invisible(capture.output(glimpse(bib_bestand)))
 
 ## Analyseziele
 
-Ich möchte jeden der fünf Bestände in jeweils 6 Zeitstrahlen unterteilen und dies dann auch graphisch darstellen (24 Graphiken). Auch noch ein grosses Streudiagramm, wo man sieht, wie die Verteilung unter den einzelnen Beständen (A-E) aussieht.
+Ich möchte jeden der fünf Bestände in jeweils 6 Zeitstrahlen unterteilen und dies dann auch graphisch darstellen (30 Graphiken). Dazu kommen ein paar Steudiagrammen, welche die Verteilung der einzelnen Bestände über die Jahre untereinander vergleichen.
 
 # Daten Aufbereitung
 
@@ -72,67 +76,14 @@ bib_gefiltert_1900_1950 <- filter(bib_bestand_besenrein, between(publication_dat
 bib_gefiltert_1951_1999 <- filter(bib_bestand_besenrein, between(publication_date, 1951, 1999)) 
 
 bib_gefiltert_2000_2050 <- filter(bib_bestand_besenrein, between(publication_date, 2000, 2050)) 
-```
-
-```{r}
-
-#Versuch, nun auch noch nach der jeweiligen Standort-Signatur (A-E) zu sortieren
-
-#A Geschichte des Auslands
-bib_gefiltert_1600_2025_A <- filter(
-  bib_bestand_besenrein,
-  between(publication_date, 1600, 2025),
-  grepl("^A", permanent_call_number) | grepl("A.*III|III.*A", permanent_call_number))
-#Visualisierung
-ggplot(bib_gefiltert_1600_2025_A, mapping=aes(x=publication_date))+
-  geom_bar()+labs(title="Bibliotheksbestand A nach Veröffentlichungszeit der einzelnen Medien",
-                  subtitle="in der StAZH Bibliothek")+theme_stat()
-
-#B Schweizer Geschichte
-bib_gefiltert_1600_2025_B <- filter(
-  bib_bestand_besenrein,
-  between(publication_date, 1600, 2025),
-  grepl("^B", permanent_call_number) | grepl("B.*III|III.*B", permanent_call_number))
-#Visualisierung
-ggplot(bib_gefiltert_1600_2025_B, mapping=aes(x=publication_date))+
-  geom_bar()+labs(title="Bibliotheksbestand B nach Veröffentlichungszeit der einzelnen Medien",
-                  subtitle="in der StAZH Bibliothek")+theme_stat()
-
-#C Geschichte der Kantone
-bib_gefiltert_1600_2025_C <- filter(
-  bib_bestand_besenrein,
-  between(publication_date, 1600, 2025),
-  grepl("^C", permanent_call_number) | grepl("C.*III|III.*C", permanent_call_number))
-#Visualisierung
-ggplot(bib_gefiltert_1600_2025_C, mapping=aes(x=publication_date))+
-  geom_bar()+labs(title="Bibliotheksbestand C nach Veröffentlichungszeit der einzelnen Medien",
-                  subtitle="in der StAZH Bibliothek")+theme_stat()
-
-#D Zürcher Geschichte
-bib_gefiltert_1600_2025_D <- filter(
-  bib_bestand_besenrein,
-  between(publication_date, 1600, 2025),
-  grepl("^D", permanent_call_number) | grepl("D.*III|III.*D", permanent_call_number))
-#Visualisierung
-ggplot(bib_gefiltert_1600_2025_D, mapping=aes(x=publication_date))+
-  geom_bar()+labs(title="Bibliotheksbestand D nach Veröffentlichungszeit der einzelnen Medien",
-                  subtitle="in der StAZH Bibliothek")+theme_stat()
-
-#E Hilfswissenschaften
-bib_gefiltert_1600_2025_E <- filter(
-  bib_bestand_besenrein,
-  between(publication_date, 1600, 2025),
-  grepl("^E", permanent_call_number) | grepl("E.*III|III.*E", permanent_call_number))
-#Visualisierung
-ggplot(bib_gefiltert_1600_2025_E, mapping=aes(x=publication_date))+
-  geom_bar()+labs(title="Bestand E nach Erscheinungsdatum d. Bücher",
-                  subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")
 
 ```
 
 ## Fragen an den Datensatz
 
-### Welcher Bestand enthält durchschnittlich die ältesten Publikationen?
+### Welcher Bestand enthält durchschnittlich die ältesten (100+ Jahre) Publikationen?
+
+Der Bestand mit den meisten Publikationen, welche vor 1925 veröffentlicht wurden, ist Bestand D, Zürcher Geschichte. Gefolgt wird er von den Beständen B, Schweizer Geschichte und C, Geschichte der Kantone.
 
 ```{r}
 
@@ -140,27 +91,246 @@ ggplot(bib_gefiltert_1600_2025_E, mapping=aes(x=publication_date))+
 
 ### Welcher Bestand ist am stärksten gewachsen (und über welchen Zeitraum)?
 
+Wenn man jeweils schaut, welcher Bestand am Anfang am kleinsten war und über die Jahre den verhältnismässig grössten Zuwachs erhalten hat, dann ist es Bestand B, Schweizer Geschichte.
+
+```{r}
+
+```
+
+### Aus welchem Jahr ist das älteste Medium in unserem Bestand?
+
+Das älteste Medium aus unserem Bestand wurde im Jahr 1645 veröffentlicht. Es befindet sich im Bestand D (Zürcher Geschichte).
+
 ```{r}
 
 ```
 
 ### Wie viele Publikationen haben wir von Bestand X aus dem Jahr X?
 
+In diese Funktion lässt sich jeweils der Bestand als auch das Datum eintragen und nach dem Ausführen des Code-Blocks erhält man eine dementsprechende function df. Deren Ergebnis muss man dann noch in einem "result" speichern.
+
 ```{r}
+filter_bib_bestand <- function(df) {df_filtered <- subset(df, publication_date == 1967 & grepl("^D", permanent_call_number))
+  return(df_filtered)
+}
+
+
+result <- filter_bib_bestand(bib_bestand_besenrein)
 
 ```
 
 # Daten Visualisierung
 
-In gewissen Bestände, haben wir aus einer bestimmten Zeitspanne weniger als 10 Publikationen. Diese habe ich graphisch nicht dargestellt.
+## Teil 1 Streudiagramme
 
-## A - E Gesamtbestand 1600 - 2025
+Dieser Abschnitt soll mithilfe von Streudiagrammen aufzeigen, wie sich die einzelnen Bestände über die Jahre verändert beziehungsweise erweitert haben. Einen Gesamtüberblick bietet hierbei @fig-bib_A_bis_E.
+
+### Bestand A-E nach Erscheinungsdatum (1600-2025)
+
+Der Code nimmt eine Tabelle namens **`bib_bestand_besenrein`** und filtert daraus nur die Einträge, deren **Signatur** mit einem Buchstaben von **A bis E** beginnt.
+
+Danach wird eine neue Spalte namens `signatur_gruppe` angelegt. In dieser steht einfach der erste Buchstabe der Signatur.
+
+Im nächsten Schritt wird noch genauer gefiltert: Es werden nur noch Bücher berücksichtigt, die zwischen 1600 und 2025 erschienen sind.
+
+Erstellung Streudiagramm:
+
+-   **x-Achse:** Erscheinungsjahr des Buchs (zwischen 1600 und 2025)
+
+-   **y-Achse:** Die Signatur-Gruppe (A, B, C, D, E)
+
+-   **Farbe:** Jede Gruppe (A-E) bekommt eine eigene Farbe.
+
+-   **geom_jitter:** Die Punkte werden leicht „verstreut“, damit man sie besser sieht.
+
+-   **Weitere Einstellungen:** Achsenbeschriftung, Titel, Farben, Aussehen usw.
 
 ```{r}
-ggplot(bib_bestand_besenrein, mapping=aes(x=publication_date))+
-  geom_histogram()+labs(title="Bestand A nach Erscheinungsdatum (vor 1800)",
-         subtitle="in der StAZH Bibliothek")+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "purple")
+#| message: false
+#| label: fig-bib_A_bis_E
+#| fig-cap: "Bestand A–E nach Erscheinungsdatum (1600–2025)"
+#| warning: false
+
+bib_A_bis_E <- bib_bestand_besenrein %>%
+  filter(grepl("^[A-E]", permanent_call_number))
+
+bib_A_bis_E <- bib_A_bis_E %>%
+  mutate(signatur_gruppe = substr(permanent_call_number, 1, 1))
+
+
+
+# Daten filtern und gruppieren
+bib_A_bis_E <- bib_bestand_besenrein %>%
+  filter(
+    grepl("^[A-E]", permanent_call_number),          # Nur A–E
+    publication_date >= 1600, publication_date <= 2025  # Zeitraum 1600–2025
+) %>%
+  mutate(signatur_gruppe = substr(permanent_call_number, 1, 1))
+
+# Plot Bestand A–E nach Erscheinungsdatum (1600–2025)
+ggplot(bib_A_bis_E, aes(x = publication_date, y = signatur_gruppe, color = signatur_gruppe)) +
+  geom_jitter(width = 0.5, height = 0.2, alpha = 0.6, size = 2) +
+  scale_y_discrete(limits = c("A", "B", "C", "D", "E")) +
+  scale_x_continuous(breaks = seq(1600, 2025, 50), limits = c(1600, 2025)) +
+  labs(
+    title = "Bestand A–E nach Erscheinungsdatum (1600–2025)",
+    subtitle = "in der StAZH Bibliothek",
+    x = "Erscheinungsdatum",
+    y = "Signatur-Gruppe",
+    color = "Signatur") +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "top")
+
+
+
+
 ```
+
+### Zusatz: als Tabelle
+
+-   Die Daten werden so gruppiert, dass für jedes Jahr (**`publication_date`**) und jede Signatur-Gruppe (**`signatur_gruppe`**, also A–E) gezählt wird, **wie viele Bücher** es jeweils gibt.
+
+-   Das Ergebnis ist eine Tabelle, in der für jedes Jahr und jede Gruppe steht, wie viele Bücher es gibt (Spalte: **`anzahl`**).
+
+```{r}
+
+bib_A_bis_E_tabelle <- bib_A_bis_E %>%
+  group_by(signatur_gruppe, publication_date) %>%
+  summarise(Anzahl = n(), .groups = "drop")
+
+print(bib_A_bis_E_tabelle)
+kable(bib_A_bis_E_tabelle)
+```
+
+### Bestand A-E nach Erscheinungsdatum (vor 1800)
+
+Es werden wieder nur Bücher mit Signatur A–E genommen. Die Signatur-Gruppe wird als neue Spalte angelegt. Dann werden **nur Bücher berücksichtigt, die vor 1800 erschienen sind**.
+
+-   Ein Streudiagramm wird erstellt, das zeigt:
+
+    -   **x-Achse:** Erscheinungsjahr (vor 1800)
+
+    -   **y-Achse:** Signatur-Gruppe (A–E)
+
+    -   **Farbe:** Jede Gruppe hat eine eigene Farbe
+
+-   Die Punkte zeigen, **welche Bücher aus A–E vor 1800 erschienen sind**.
+
+```{r}
+
+
+# Aggregieren
+bib_A_bis_E_agg <- bib_A_bis_E %>%
+  group_by(publication_date, signatur_gruppe) %>%
+  summarise(anzahl = n(), .groups = "drop")
+
+
+# Daten filtern und gruppieren
+bib_A_bis_E <- bib_bestand_besenrein %>%
+  filter(grepl("^[A-E]", permanent_call_number)) %>%
+  mutate(signatur_gruppe = substr(permanent_call_number, 1, 1)) %>%
+  filter(publication_date < 1800)  # Nur vor 1800
+
+
+
+# Plot Bestand A–E nach Erscheinungsdatum (vor 1800)
+ggplot(bib_A_bis_E, aes(x = publication_date, y = signatur_gruppe, color = signatur_gruppe)) +
+  geom_jitter(width = 0.5, height = 0.2, alpha = 0.6, size = 2) +
+  scale_y_discrete(limits = c("A", "B", "C", "D", "E")) +
+  scale_x_continuous(breaks = seq(1500, 1800, 50), limits = c(1500, 1800)) +
+  labs(
+    title = "Bestand A–E nach Erscheinungsdatum (vor 1800)",
+    subtitle = "in der StAZH Bibliothek",
+    x = "Erscheinungsdatum",
+    y = "Signatur-Gruppe",
+    color = "Signatur") +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "top")
+```
+
+### Bestand A-E nach Erscheinungsdatum, Einzeldarstellungen
+
+-   **Intervalle definieren**:\
+    **`breaks`** legt Jahresgrenzen (1800–2026), **`labels`** erstellt menschenlesbare Intervallbeschriftungen wie "1800–1849"
+
+-   **Daten filtern**:\
+    **`filter`** wählt Bücher mit Signaturen A–E und Erscheinungsjahren zwischen 1600–2025 aus.
+
+-   **Neue Spalten erstellen**:
+
+    -   **`signatur_gruppe`**: Extrahiert den ersten Buchstaben der Signatur (A–E)
+
+    -   **`intervall`**: Ordnet jedes Buch seinem 50-Jahres-Intervall zu (mit **`cut()`** und **`right=FALSE`** für linksinklusive Intervalle)
+
+-   **Jitter-Plot**:\
+    **`geom_jitter`** verteilt Punkte leicht zufällig, um Überlappungen zu vermeiden.
+
+    -   **`x`** = Erscheinungsjahr
+
+    -   **`y`** = Signaturgruppe (A–E)
+
+    -   Farbe kodiert die Signaturgruppe
+
+-   **Achsenanpassungen**:
+
+    -   **`scale_x_continuous`** zoomt auf das aktuelle Intervall (z.B. 1800–1849)
+
+    -   **`scale_y_discrete`** erzwingt die Sortierung A–E\[\^\].
+
+-   **Design**:
+
+    -   Drehung der Jahreszahlen (**`angle=45`**)
+
+    -   Legende oben (**`legend.position="top"`**)
+
+    -   Modernes Minimal-Design (**`theme_minimal`**)
+
+```{r}
+#| warning: false
+# Intervallgrenzen und Labels
+breaks <- c(1800, 1850, 1900, 1950, 2000, 2026)
+labels <- c("1800–1849", "1850–1899", "1900–1949", "1950–1999", "2000–2025")
+
+bib_A_bis_E <- bib_bestand_besenrein %>%
+  filter(grepl("^[A-E]", permanent_call_number),
+         publication_date >= 1600, publication_date <= 2025) %>%
+  mutate(
+    signatur_gruppe = substr(permanent_call_number, 1, 1),
+    intervall = cut(publication_date, breaks = breaks, labels = labels, right = FALSE))
+
+
+
+for (int in labels) {
+  daten <- bib_A_bis_E %>% filter(intervall == int)
+  
+  p <- ggplot(daten, aes(x = publication_date, y = signatur_gruppe, color = signatur_gruppe)) +
+    geom_jitter(width = 0.5, height = 0.2, alpha = 0.7, size = 2) +
+    scale_y_discrete(limits = c("A", "B", "C", "D", "E")) +
+    scale_x_continuous(limits = range(breaks[which(labels == int):(which(labels == int)+1)])) +
+    labs(
+      title = paste("Bestand A–E nach Erscheinungsdatum (", int, ")", sep = ""),
+      subtitle = "in der StAZH Bibliothek",
+      x = "Erscheinungsdatum",
+      y = "Signatur-Gruppe",
+      color = "Signatur"
+    ) +
+    theme_minimal(base_size = 14) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      legend.position = "top"
+    )
+  
+  print(p)}
+
+```
+
+## Teil 2 - Balkendiagramme
+
+Hier versuche ich nun von jedem Bestand für jeden 50-Jahre-Abschnitt eine eigene Graphik zu erstellen. Ist jeweils die erste generiert, sind folgende einfacher. In gewissen Bestände, haben wir aus einer bestimmten Zeitspanne weniger als 10 Publikationen. Diese habe ich graphisch nicht dargestellt.
 
 ## Vor 1800
 
@@ -174,7 +344,6 @@ ggplot(bib_gefiltert_vor_1800_A, mapping=aes(x=publication_date))+
          subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3)+geom_bar(fill = "steelblue")+
   scale_x_continuous(breaks = seq(1600, 1800, by = 25))
 count(bib_gefiltert_vor_1800_A)
-print(bib_gefiltert_vor_1800_A)
 ```
 
 ### B
@@ -336,7 +505,7 @@ bib_gefiltert_1851_1899_D <- filter(bib_bestand, between(publication_date, 1851,
 
 ggplot(bib_gefiltert_1851_1899_D, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Bestand D nach Erscheinungsdatum (1851-1899)",
-         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3)+geom_bar(fill = "blue3")+
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3,size=3)+geom_bar(fill = "blue3")+
   scale_x_continuous(breaks = seq(1851, 1899, by = 5))
 count(bib_gefiltert_1851_1899_D)
 ```
@@ -388,62 +557,181 @@ bib_gefiltert_1900_1950_C <- filter(bib_bestand_besenrein, between(publication_d
 ggplot(bib_gefiltert_1900_1950_C, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Bestand C nach Erscheinungsdatum (1900-1950)",
          subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
-  scale_x_continuous(breaks = seq(1900, 1950, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3)
+  scale_x_continuous(breaks = seq(1900, 1950, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=3)
 count(bib_gefiltert_1900_1950_C)
 ```
 
 ### D
 
+```{r}
+bib_gefiltert_1900_1950_D <- filter(bib_bestand_besenrein, between(publication_date, 1900, 1950),grepl("^D", permanent_call_number) | grepl("D.*III|III.*D", permanent_call_number))
+
+ggplot(bib_gefiltert_1900_1950_D, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand D nach Erscheinungsdatum (1900-1950)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(1900, 1950, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=2.5)
+count(bib_gefiltert_1900_1950_D)
+```
+
 ### E
 
 ```{r}
+bib_gefiltert_1900_1950_E <- filter(bib_bestand_besenrein, between(publication_date, 1900, 1950),grepl("^E", permanent_call_number) | grepl("E.*III|III.*E", permanent_call_number))
 
+ggplot(bib_gefiltert_1900_1950_E, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand E nach Erscheinungsdatum (1900-1950)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(1900, 1950, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=3)
+count(bib_gefiltert_1900_1950_E)
 ```
 
 ## 1951 - 1999
 
 ### A
 
+```{r}
+bib_gefiltert_1951_1999_A <- filter(bib_bestand_besenrein, between(publication_date, 1951, 1999),grepl("^A", permanent_call_number) | grepl("A.*III|III.*A", permanent_call_number))
+
+ggplot(bib_gefiltert_1951_1999_A, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand A nach Erscheinungsdatum (1951-1999)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(1951, 1999, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=3)
+count(bib_gefiltert_1951_1999_A)
+```
+
 ### B
+
+```{r}
+bib_gefiltert_1951_1999_B <- filter(bib_bestand_besenrein, between(publication_date, 1951, 1999),grepl("^B", permanent_call_number) | grepl("B.*III|III.*B", permanent_call_number))
+
+ggplot(bib_gefiltert_1951_1999_B, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand B nach Erscheinungsdatum (1951-1999)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(1951, 1999, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=3)
+count(bib_gefiltert_1951_1999_B)
+```
 
 ### C
 
+```{r}
+bib_gefiltert_1951_1999_C <- filter(bib_bestand_besenrein, between(publication_date, 1951, 1999),grepl("^C", permanent_call_number) | grepl("C.*III|III.*C", permanent_call_number))
+
+ggplot(bib_gefiltert_1951_1999_C, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand C nach Erscheinungsdatum (1951-1999)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(1951, 1999, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=3)
+count(bib_gefiltert_1951_1999_C)
+```
+
 ### D
+
+```{r}
+bib_gefiltert_1951_1999_D <- filter(bib_bestand_besenrein, between(publication_date, 1951, 1999),grepl("^D", permanent_call_number) | grepl("D.*III|III.*D", permanent_call_number))
+
+ggplot(bib_gefiltert_1951_1999_D, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand D nach Erscheinungsdatum (1951-1999)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(1951, 1999, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=2.5)
+count(bib_gefiltert_1951_1999_D)
+```
 
 ### E
 
 ```{r}
+bib_gefiltert_1951_1999_E <- filter(bib_bestand_besenrein, between(publication_date, 1951, 1999),grepl("^E", permanent_call_number) | grepl("E.*III|III.*E", permanent_call_number))
 
+ggplot(bib_gefiltert_1951_1999_E, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand E nach Erscheinungsdatum (1951-1999)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(1951, 1999, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=2.5)
+count(bib_gefiltert_1951_1999_E)
 ```
 
 ## 2000 - 2025
 
 ### A
 
+```{r}
+bib_gefiltert_2000_2025_A <- filter(bib_bestand_besenrein, between(publication_date, 2000, 2025),grepl("^A", permanent_call_number) | grepl("A.*III|III.*A", permanent_call_number))
+
+ggplot(bib_gefiltert_2000_2025_A, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand A nach Erscheinungsdatum (2000-2025)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(2000, 2025, by = 5))
+count(bib_gefiltert_2000_2025_A)
+```
+
 ### B
+
+```{r}
+bib_gefiltert_2000_2025_B <- filter(bib_bestand_besenrein, between(publication_date, 2000, 2025),grepl("^B", permanent_call_number) | grepl("B.*III|III.*B", permanent_call_number))
+
+ggplot(bib_gefiltert_2000_2025_B, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand B nach Erscheinungsdatum (2000-2025)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(2000, 2025, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=3)
+count(bib_gefiltert_2000_2025_B)
+```
 
 ### C
 
+```{r}
+bib_gefiltert_2000_2025_C <- filter(bib_bestand_besenrein, between(publication_date, 2000, 2025),grepl("^C", permanent_call_number) | grepl("C.*III|III.*C", permanent_call_number))
+
+ggplot(bib_gefiltert_2000_2025_C, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand C nach Erscheinungsdatum (2000-2025)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(2000, 2025, by = 5))
+count(bib_gefiltert_2000_2025_C)
+```
+
 ### D
+
+```{r}
+bib_gefiltert_2000_2025_D <- filter(bib_bestand_besenrein, between(publication_date, 2000, 2025),grepl("^D", permanent_call_number) | grepl("D.*III|III.*D", permanent_call_number))
+
+ggplot(bib_gefiltert_2000_2025_D, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand D nach Erscheinungsdatum (2000-2025)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(2000, 2025, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=3)
+count(bib_gefiltert_2000_2025_D)
+```
 
 ### E
 
 ```{r}
+bib_gefiltert_2000_2025_E <- filter(bib_bestand_besenrein, between(publication_date, 2000, 2025),grepl("^E", permanent_call_number) | grepl("E.*III|III.*E", permanent_call_number))
 
-```
-
-```{r}
-#Probe-Visualisierung 
-ggplot(bib_gefiltert_1800_1850, mapping=aes(x=publication_date))+
-  geom_bar()+labs(title="Publikationen 1800-1850",
-         subtitle="in der StAZH Bibliothek")
-
-```
-
-```{r}
-ggplot(bib_gefiltert_1600_2025_E, mapping=aes(x=publication_date))+
-  geom_bar()+labs(title="Bestand E nach Erscheinungsdatum d. Bücher",
-         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")
+ggplot(bib_gefiltert_2000_2025_E, mapping=aes(x=publication_date))+
+  geom_bar()+labs(title="Bestand E nach Erscheinungsdatum (2000-2025)",
+         subtitle="in der StAZH Bibliothek")+theme_stat()+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")+geom_bar(fill = "blue3")+
+  scale_x_continuous(breaks = seq(2000, 2025, by = 5))+geom_text(stat='count', aes(label=after_stat(count)), vjust=-0.3, size=3)
+count(bib_gefiltert_2000_2025_E)
 ```
 
 # Schlussfolgerungen
+
+Die Ergebnisse zeigen, dass sich der Bestand der Bibliothek des Staatsarchives über knapp 400 Jahre erstreckt. Das **älteste Medium** ist dabei **von 1645** und stammt aus dem **Bestand D, Zürcher Geschichte**. Am **jüngsten ist der Bestand B, Schweizer Geschichte**, mit einem Eintrag **aus dem Jahr 1787**. Die ersten Einträge der übrigen Bestände sind:\
+A, Geschichte des Auslands: 1652\
+C, Geschichte der Kantone: 1785\
+E, Hilfswissenschaften: 1769
+
+Auch wenn Bestand B und C hier recht jung wirken, so sind sie dennoch auf Platz 2 und 3 der Bestände mit den durchschnittlich ältesten Publikationen.
+
+Der Bestand mit den meisten Einträgen ist Bestand D, Zürcher Geschichte und der mit den wenigsten A, Geschichte des Auslands.
+
+Mithilfe von Grafiken, welche immer und je Bestand eine 50-Jahre-Sequenz abbilden, sind diese Daten noch einmal veranschaulicht.
+
+Des Weiteren kann mithilfe einer Funktion genau berechnet werden, wie viele Medien die Bibliothek aus einem bestimmten Jahr und einem bestimmten Bestand besitzt.
+
+# Komplikationen
+
+Da es sich bei sehr vielen unserer Exemplare um Fortsetzungen handelt, spiegeln die Graphiken nur jeweils einen ungefähren Wert wider, auf den aber nicht verlässlich zugegriffen werden kann. Das Problem ist, dass in der Spalte "Publication Date" jeweils nur das Datum angegeben wird, wann eine Publikation tatsächlich das erste Mal erschienen ist - so sind also Fortsetzungen alle unter einem Jahr aufgelistet und nicht zum Beispiel kontinuierlich etwa einmal pro Jahr. Sozusagen wird die Periodizität nicht beachtet und selbst wenn ein Medium 50 Ausgaben über 50 Jahre hat, so zählen wir hier 50x das erste Datum. Des Weiteren enthält das Feld "Publication Date" sehr oft einen leeren Wert (NA). Daher wurden schlussendlich aus eigentlichen 140'000 Einträgen nur 8'000.\
+So sind leider **alle Angaben in diesem Bericht ohne Gewähr**.
+
+## Lösung
+
+Das Problem mit den Fortsetzungen liesse sich recht simpel lösen, in dem man entweder alle rausfiltert, oder die Spalte "description" miteinbezieht, denn hier ist jeweils das eigentliche Erscheinungsdatum der einzelnen Reihen- oder Zeitschriftenexemplare vermerkt. Die NA-Einträge hingegen, konnte ich mir bisher leider nicht erklären. Sie entstehen beim Importieren der Datei auf meine Arbeitsumgebung in R.
+
+Vielen Dank fürs Lesen und beste Grüsse\
+Leon

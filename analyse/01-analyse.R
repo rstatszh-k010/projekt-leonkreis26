@@ -104,3 +104,37 @@ ggplot(bib_bestand_besenrein, mapping=aes(x=publication_date))+
   geom_bar()+labs(title="Publikationen 1800-2025",
                   subtitle="in der StAZH Bibliothek")
 
+
+
+ggplot(bib_bestand_besenrein, mapping=aes(x=publication_date,y=permanent_call_number))+
+  geom_point()+labs(title="Bestand A nach Erscheinungsdatum (vor 1800)",
+                    subtitle="in der StAZH Bibliothek")+labs(x = "Erscheinungsdatum", y = "Anzahl Medien")
+
+
+ggplot(bib_A_bis_E, aes(x = publication_date, y = signatur_gruppe)) +
+  geom_point() +
+  labs(
+    title = "Bestand A-E nach Erscheinungsdatum (vor 1800)",
+    subtitle = "in der StAZH Bibliothek",
+    x = "Erscheinungsdatum",
+    y = "Signatur-Gruppe"
+  )
+
+
+
+# Linien-Plot
+ggplot(bib_A_bis_E_agg, aes(x = publication_date, y = anzahl, color = signatur_gruppe)) +
+  geom_line(size = 1) +
+  labs(
+    title = "Medienzahl nach Erscheinungsjahr und Signaturgruppe (A–E)",
+    subtitle = "in der StAZH Bibliothek",
+    x = "Erscheinungsdatum",
+    y = "Anzahl Medien",
+    color = "Signatur"
+  ) +
+  theme_minimal()
+
+
+
+
+
