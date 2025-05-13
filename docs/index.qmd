@@ -1,6 +1,6 @@
 ---
 title: "Abschlussprojekt"
-author: "Tom Bombadil"
+author: "Leon Kreis"
 date: "`r Sys.Date()`"
 format: html
 toc: true

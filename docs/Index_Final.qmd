@@ -1,0 +1,65 @@
+---
+title: "Abschlussprojekt Programmieren mit R"
+author: "Leon Kreis"
+date: "`r Sys.Date()`"
+format: html
+toc: true
+---
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(readxl)
+library(devtools)
+library(statR)
+library(knitr)
+```
+
+# Einleitung
+
+In diesem R-Projekt versuche ich unseren Bibliotheks-Bestand nach dem Jahr der Veröffentlichung der einzelnen Medien aufzustellen. Konkret also lautet die Frage: "Wie viele Exemplare haben wir, welche z.Bsp. 1950 publiziert wurden im Bestand xy stehen?"
+
+## Daten
+
+Bei den verwendeten Daten handelt es sich um eine Bestandesliste aller Exemplare in der Bibliothek des Staatsarchiv ZH. Diese wurde von SLSP (Swiss Librarian Service Platform) produziert und zur Verfügung gestellt. Mit ALMA, dem von uns verwendeten Bibliotheksprogramm, sind die Datensätze auf 100'000 Zeilen limitiert, daher war es einfacher, direkt beim Anbieter anzufragen, anstatt selbst etwas zu basteln.
+
+```{r}
+ustaz_bestand<-read_csv2(here::here("daten/test/USTAZ_Inventarliste_getrennt.csv"))|> janitor::clean_names()
+```
+
+## Analyseziele
+
+Ich möchte jeden der fünf Bestände in jeweils 6 Zeitstrahlen unterteilen und dies dann auch graphisch darstellen (30 Graphiken). Dazu kommen ein paar Steudiagrammen, welche die Verteilung der einzelnen Bestände über die Jahre untereinander vergleichen.
+
+# Daten Aufbereitung
+
+```{r}
+# Die Funktion gibt die Anzahl der Einträge in Publication Date zurück, bei denen ein Wert vorhanden ist: 139177
+ustaz_bestand_gefiltert<-ustaz_bestand$publication_date
+sum(!is.na(ustaz_bestand$publication_date))
+
+```
+
+```{r}
+# Aus der Spalte "Publication Date" das Minuszeichen entfernen, da sonst eine Sortierung nach Jahreszahlen (auch filter) nicht möglich ist.
+
+ustaz_bestand_clean<-ustaz_bestand
+
+# Minus am Anfang entfernen
+ustaz_bestand_clean$publication_date <- gsub("^-+", "", ustaz_bestand_clean$publication_date)
+
+# Minus am Ende entfernen
+ustaz_bestand_clean$publication_date <- gsub("-+$", "", ustaz_bestand_clean$publication_date)
+
+ustaz_bestand_clean$publication_date <- gsub("\\[\\?-", "", ustaz_bestand_clean$publication_date)
+
+ustaz_bestand_clean$publication_date <- gsub("\\[|\\]", "", ustaz_bestand_clean$publication_date)
+
+ustaz_bestand_clean$publication_date <- gsub("\\?", "", ustaz_bestand_clean$publication_date)
+
+```
