@@ -1,0 +1,17 @@
+variable_name;beschreibung
+mms_id;Datensatznummer des Exemplares
+author;der Urheber des Werkes
+title;Text auf Titelblatt
+publication_date;Datum der Veröffentlichung
+permanent_call_number;Holdingsignatur
+normalized_call_number;
+item_call_number;Exemplarsignatur
+description;Beschreibung des Mediums
+barcode;Strichcode des Mediums
+item_policy;Exemplarrichtlinien
+base_status;Exemplarstatus
+process_type;Prozesstyp(in Bearbeitung usw.)
+library_code;Bibliothekskennzeichen
+library_name;Name der Bibliothek
+location_code;""
+location;name""

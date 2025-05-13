@@ -709,6 +709,13 @@ ggplot(bib_gefiltert_2000_2025_E, mapping=aes(x=publication_date))+
 count(bib_gefiltert_2000_2025_E)
 ```
 
+```{r}
+
+write_csv(x = bib_bestand_besenrein, 
+          here::here("daten/processed/processed_project.csv"))
+
+```
+
 # Schlussfolgerungen
 
 Die Ergebnisse zeigen, dass sich der Bestand der Bibliothek des Staatsarchives über knapp 400 Jahre erstreckt. Das **älteste Medium** ist dabei **von 1645** und stammt aus dem **Bestand D, Zürcher Geschichte**. Am **jüngsten ist der Bestand B, Schweizer Geschichte**, mit einem Eintrag **aus dem Jahr 1787**. Die ersten Einträge der übrigen Bestände sind:\
@@ -733,5 +740,7 @@ So sind leider **alle Angaben in diesem Bericht ohne Gewähr**.
 
 Das Problem mit den Fortsetzungen liesse sich recht simpel lösen, in dem man entweder alle rausfiltert, oder die Spalte "description" miteinbezieht, denn hier ist jeweils das eigentliche Erscheinungsdatum der einzelnen Reihen- oder Zeitschriftenexemplare vermerkt. Die NA-Einträge hingegen, konnte ich mir bisher leider nicht erklären. Sie entstehen beim Importieren der Datei auf meine Arbeitsumgebung in R.
 
-Vielen Dank fürs Lesen und beste Grüsse\
+Edit: Das Problem entstand durch eine fehlerhafte Zeilentrennung in der Excel-Liste. Diese wurde vom Anbieter SLSP auf Anfrage bereinigt. Dieses Projekt jedoch, arbeitet momentan mit den alten Daten, da es aus zeitlichen Gründen nicht für eine Anpassung reichte.
+
+Vielen Dank fürs Lesen \
 Leon
