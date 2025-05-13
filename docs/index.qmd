@@ -20,7 +20,7 @@ library(statR)
 library(knitr)
 ```
 
-![Bibliothek](/cloud/project/images/2112_lesesaal_stazh.jpg){#fig-bibliothek}
+![Bibliothek](images/2112_lesesaal_stazh.jpg){#fig-bibliothek}
 
 # Einleitung
 
