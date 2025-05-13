@@ -369,7 +369,7 @@ Figure&nbsp;2: Bestand A–E nach Erscheinungsdatum (1600–2025)
 <h3 class="anchored" data-anchor-id="zusatz-als-tabelle">Zusatz: als Tabelle</h3>
 <ul>
 <li><p>Die Daten werden so gruppiert, dass für jedes Jahr (<strong><code>publication_date</code></strong>) und jede Signatur-Gruppe (<strong><code>signatur_gruppe</code></strong>, also A–E) gezählt wird, <strong>wie viele Bücher</strong> es jeweils gibt.</p></li>
-<li><p>Das Ergebnis ist eine Tabelle, in der für jedes Jahr und jede Gruppe steht, wie viele Bücher es gibt (Spalte: <strong><code>anzahl</code></strong>).</p></li>
+<li><p>Das Ergebnis ist eine Tabelle, in der für jedes Jahr und jede Gruppe steht, wie viele Bücher es gibt (Spalte: <strong><code>anzahl</code></strong>). <a href="#fig-bib_A_bis_E_tabelle" class="quarto-xref">Figure&nbsp;3</a></p></li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bib_A_bis_E_tabelle <span class="ot">&lt;-</span> bib_A_bis_E <span class="sc">%&gt;%</span></span>
@@ -394,7 +394,9 @@ Figure&nbsp;2: Bestand A–E nach Erscheinungsdatum (1600–2025)
 # ℹ 395 more rows</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(bib_A_bis_E_tabelle)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+<div id="fig-bib_A_bis_E_tabelle" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bib_A_bis_E_tabelle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
@@ -2432,6 +2434,11 @@ Figure&nbsp;2: Bestand A–E nach Erscheinungsdatum (1600–2025)
 </tbody>
 </table>
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bib_A_bis_E_tabelle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Bestand A–E nach Erscheinungsdatum (1600–2025)
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="bestand-a-e-nach-erscheinungsdatum-vor-1800" class="level3">
@@ -3324,6 +3331,10 @@ Figure&nbsp;2: Bestand A–E nach Erscheinungsdatum (1600–2025)
 1    51</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(<span class="at">x =</span> bib_bestand_besenrein, </span>
+<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a>          here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"daten/processed/processed_project.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </section>
 </section>
@@ -3345,7 +3356,8 @@ So sind leider <strong>alle Angaben in diesem Bericht ohne Gewähr</strong>.</p>
 <section id="lösung" class="level2">
 <h2 class="anchored" data-anchor-id="lösung">Lösung</h2>
 <p>Das Problem mit den Fortsetzungen liesse sich recht simpel lösen, in dem man entweder alle rausfiltert, oder die Spalte “description” miteinbezieht, denn hier ist jeweils das eigentliche Erscheinungsdatum der einzelnen Reihen- oder Zeitschriftenexemplare vermerkt. Die NA-Einträge hingegen, konnte ich mir bisher leider nicht erklären. Sie entstehen beim Importieren der Datei auf meine Arbeitsumgebung in R.</p>
-<p>Vielen Dank fürs Lesen und beste Grüsse<br>
+<p>Edit: Das Problem entstand durch eine fehlerhafte Zeilentrennung in der Excel-Liste. Diese wurde vom Anbieter SLSP auf Anfrage bereinigt. Dieses Projekt jedoch, arbeitet momentan mit den alten Daten, da es aus zeitlichen Gründen nicht für eine Anpassung reichte.</p>
+<p>Vielen Dank fürs Lesen<br>
 Leon</p>
 </section>
 </section>

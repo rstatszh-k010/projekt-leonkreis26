@@ -192,9 +192,11 @@ ggplot(bib_A_bis_E, aes(x = publication_date, y = signatur_gruppe, color = signa
 
 -   Die Daten werden so gruppiert, dass für jedes Jahr (**`publication_date`**) und jede Signatur-Gruppe (**`signatur_gruppe`**, also A–E) gezählt wird, **wie viele Bücher** es jeweils gibt.
 
--   Das Ergebnis ist eine Tabelle, in der für jedes Jahr und jede Gruppe steht, wie viele Bücher es gibt (Spalte: **`anzahl`**).
+-   Das Ergebnis ist eine Tabelle, in der für jedes Jahr und jede Gruppe steht, wie viele Bücher es gibt (Spalte: **`anzahl`**). @fig-bib_A_bis_E_tabelle
 
 ```{r}
+#| label: fig-bib_A_bis_E_tabelle
+#| fig-cap: "Bestand A–E nach Erscheinungsdatum (1600–2025)"
 
 bib_A_bis_E_tabelle <- bib_A_bis_E %>%
   group_by(signatur_gruppe, publication_date) %>%
@@ -742,5 +744,5 @@ Das Problem mit den Fortsetzungen liesse sich recht simpel lösen, in dem man en
 
 Edit: Das Problem entstand durch eine fehlerhafte Zeilentrennung in der Excel-Liste. Diese wurde vom Anbieter SLSP auf Anfrage bereinigt. Dieses Projekt jedoch, arbeitet momentan mit den alten Daten, da es aus zeitlichen Gründen nicht für eine Anpassung reichte.
 
-Vielen Dank fürs Lesen \
+Vielen Dank fürs Lesen\
 Leon
